@@ -454,8 +454,8 @@ static NSString *const lettersSet[maxLettersSet] = {
             }
         }
     }
-
-    return ![self shouldSymbolsBeIgnored:className];
+    
+    return NO;
 }
 
 - (BOOL)shouldSymbolsBeIgnored:(NSString *)symbolName {
