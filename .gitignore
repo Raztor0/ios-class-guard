@@ -3,3 +3,4 @@ xcuserdata
 .idea
 Pods/BuildHeaders
 build
+*.DS_Store*
