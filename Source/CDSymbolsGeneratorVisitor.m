@@ -9,6 +9,7 @@
 #import "CDObjectiveCProcessor.h"
 #import "CDMachOFile.h"
 #import "CDType.h"
+#import "CDTypeName.h"
 
 static const int maxLettersSet = 3;
 static NSString *const lettersSet[maxLettersSet] = {
@@ -595,7 +596,7 @@ static NSString *const lettersSet[maxLettersSet] = {
         }
 
         if (type.typeName) {
-            [_forbiddenNames addObject:[NSString stringWithFormat:@"%@", type.typeName]];
+            [_forbiddenNames addObject:[type.typeName description]];
         }
     }
 }
