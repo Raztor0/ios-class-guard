@@ -564,7 +564,7 @@ static NSString *const lettersSet[maxLettersSet] = {
 }
 
 - (void)visitIvar:(CDOCInstanceVariable *)ivar {
-    if (_ignored) {
+    if (_ignored && ![_classNames containsObject:ivar.type.typeName.description]) {
         [self visitType:ivar.type];
     } else {
         [_ivarNames addObject:ivar.name];
@@ -572,7 +572,7 @@ static NSString *const lettersSet[maxLettersSet] = {
 }
 
 - (void)visitProperty:(CDOCProperty *)property {
-    if (_ignored) {
+    if (_ignored && ![_classNames containsObject:property.type.typeName.description]) {
         [_forbiddenNames addObject:property.name];
         [_forbiddenNames addObject:property.defaultGetter];
         [_forbiddenNames addObject:[@"_" stringByAppendingString:property.name]];
@@ -590,7 +590,7 @@ static NSString *const lettersSet[maxLettersSet] = {
 }
 
 - (void)visitType:(CDType *)type {
-    if (_ignored) {
+    if (_ignored && ![_classNames containsObject:type.typeName.description]) {
         for (NSString *protocol in type.protocols) {
             [_forbiddenNames addObject:protocol];
         }
