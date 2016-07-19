@@ -68,6 +68,12 @@
             ReferencedContainer = "container:ios-class-guard.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "--sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk -F ShopkickAppInfo -F SKAppInfoProtocol -O /Volumes/shopkick_repo/shopkick/apps/shopkick/iphone/Shopkick/symbols.h /Volumes/shopkick_repo/shopkick/apps/shopkick/iphone/Shopkick/build/Build/Products/Debug-QA-iphoneos/Shopkick.app/Shopkick"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
